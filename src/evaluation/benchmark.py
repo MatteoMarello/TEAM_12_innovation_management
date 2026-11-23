@@ -85,6 +85,35 @@ def chart(figures, result):
     (figures / 'human_reference_confusion_matrix.svg').write_text('\n'.join(svg) + '\n', encoding='utf-8')
 
 
+def class_score_chart(figures, result):
+    colors = {'precision': '#155279', 'recall': '#347d68', 'f1': '#784972'}
+    per_class = result['three_class']['per_class']
+    svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="680" height="365" viewBox="0 0 680 365">',
+           '<title>Precision, recall and F1 per benchmark class</title>',
+           '<rect width="680" height="365" fill="white"/>',
+           '<g font-family="sans-serif" fill="#17324a">',
+           '<text x="26" y="38" font-size="22" font-weight="bold">Benchmark scores by class</text>']
+    for tick in range(6):
+        x = 164 + 91 * tick
+        svg.append(f'<path d="M{x} 73V300" stroke="#e7edf1"/>')
+        svg.append(f'<text x="{x}" y="321" text-anchor="middle" font-size="12">{tick / 5:.1f}</text>')
+    for index, label in enumerate(LABELS):
+        y = 83 + 73 * index
+        svg.append(f'<text x="151" y="{y+29}" text-anchor="end" font-size="14">{label}</text>')
+        for offset, (metric, color) in enumerate(colors.items()):
+            value = per_class[label][metric]
+            position = y + 18 * offset
+            width = 455 * value
+            svg.append(f'<rect x="164" y="{position}" width="{width:.2f}" height="14" fill="{color}"/>')
+            svg.append(f'<text x="{169+width:.2f}" y="{position+12}" font-size="12">{value:.3f}</text>')
+    for index, (metric, color) in enumerate(colors.items()):
+        x = 165 + 125 * index
+        svg.append(f'<rect x="{x}" y="335" width="12" height="12" fill="{color}"/>')
+        svg.append(f'<text x="{x+17}" y="346" font-size="13">{metric.upper() if metric == "f1" else metric.title()}</text>')
+    svg += ['</g>', '</svg>']
+    (figures / 'human_reference_class_scores.svg').write_text('\n'.join(svg) + '\n', encoding='utf-8')
+
+
 def report(path, result):
     lines = [
         '# Evaluation against the 300-family human-reviewed benchmark', '',
@@ -138,3 +167,4 @@ if __name__ == '__main__':
     (out / 'human_reference_metrics.json').write_text(json.dumps(metrics, indent=2) + '\n')
     report(out / 'BENCHMARK.md', metrics)
     chart(args.reports / 'figures', metrics)
+    class_score_chart(args.reports / 'figures', metrics)
