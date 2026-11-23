@@ -1,0 +1,456 @@
+ASTRA DECISION BOUNDARIES AND RULEBOOK
+
+1. Objective, sector definition and unit of analysis (DOCDB family)
+
+Team 12 | Politecnico di Torino | Innovation Management | Enel electricity-storage landscape | V4 |
+19 November 2026
+
+The question for each family is whether its principal technical contribution concerns stationary
+industrial or utility/network-serving storage for subsequent delivery as electricity. The unit is
+one original DOCDB family. Several members, kinds or claims may inform that decision, but each
+family receives one vote and one label. A specific, technically developed embodiment can establish
+the family’s relevance, including when other embodiments serve different markets. Being useful to
+an electricity company, being patented by an energy specialist, or appearing in a storage search
+does not establish that relationship.
+
+Start with three notes in ordinary language. Identify what the invention changes, the path from
+charging or energy capture through retention to electrical delivery, and the installation or
+service that uses it. For a support invention, identify where it acts on that path. Apply the two
+gates below before choosing a segment or counting families.
+
+2. What counts as electricity storage and what fails Gate S
+
+Gate S asks whether storing energy for subsequent electrical output, or technically enabling that
+function, is material to the disclosed contribution. Find a retained quantity, a time separation
+and an electrical release function. Common cases are charge in a battery, liquid head, pressurized
+air, angular momentum, working electrolyte, heat subsequently used by a generator, or an
+electrically produced fuel reserved for later generation. Power electronics alone convert or route
+energy. A tank alone establishes only that something is kept. Identify what it keeps and why.
+
+A part need not claim the complete chain. A reservoir that changes usable discharge capacity in a
+purpose-built CAES plant acts directly on storage. A network controller that commands charging of
+an identified electricity-storage system acts on the charge leg even if the abstract omits its
+inverter. Both require evidence of what system the part serves. A generic compressor, a DC link
+that merely smooths pulses, or a transmission path that can pass regenerative energy straight to
+another load does not establish a store-and-release contribution.
+
+For enabling inventions, look for a storage-specific decision, measurement or intervention. State
+of charge constraining grid response, a discharge-rate setpoint, equipment sizing derived from
+cycling limits and a cleaning mode for a flow-battery stack are examples. For simulation or
+planning, a technical resource parameter, capacity, location, feasible response or schedule must
+depend on storage. A financial score, abstract energy trade or generic reserve assignment in a
+system that happens to contain a battery does not suffice.
+
+3. What establishes utility, network or industrial relevance (Gate U)
+
+Identify the electrical beneficiary and the service. Examples include a store at a generating
+station smoothing its export, an aggregate fleet responding to distribution demand, a microgrid
+balancing several sources and loads, or retained energy returned across the buses of an industrial
+plant. An islanded network can qualify. A grid connection available for charging, a household
+selling surplus, a mobile device connected to mains or a utility tariff on a bill establishes
+little about the function of the store.
+
+A second route is objective plant architecture. Examples include a chamber and expander train, a
+pumped reservoir discharging through a generator, a tank-and-stack flow system, or an
+electricity-storage retrofit integrated with existing generating and transmission equipment. Look
+for the arrangement of equipment, its duty and its connections. Do not infer plant scale from a
+word such as modular, microgrid, industrial or high-power in isolation. Likewise, a device
+installed at a factory can still be a process load with no in-scope storage function.
+
+There is no fixed MW or MWh threshold. A common battery controlling demand across several dwelling
+units provides a network service even without a rating. A high-power traction battery can fail the
+same test. Record EXPLICIT_NETWORK_OR_INDUSTRIAL for an evidenced context or service and
+PROVEN_PLANT_ARCHITECTURE when the engineered installation establishes applicability. In an
+excluded row, a network context may be explicit while Gate S fails. NOT_ESTABLISHED records an
+unproved link. EXPLICITLY_OUT_OF_SCOPE records an identified end use outside the sector.
+
+4. Precise label definitions and decision tree
+
+CORE. Both gates pass and the invention materially changes the physical ability to capture, retain
+or release energy, the working medium, or the integrated physical charge/store/discharge
+arrangement. A subsystem can satisfy this definition. Adding conventional batteries to an equipment
+list does not by itself change the storage mechanism.
+
+ENABLING. Both gates pass and the principal contribution operates, sizes, interconnects, protects,
+diagnoses or maintains the qualifying store. A converter, control cabinet or maintenance circuit
+can be tangible equipment and still perform an enabling function. Under the Team 12 rule of 17
+November, dispatch or peak-clipping/valley-filling of an existing BESS is ENABLING.
+
+IRRELEVANT. The supplied evidence fails at least one gate, or the invention changes another
+function and its reference to storage is incidental. The reason should name the missing
+relationship or actual end use. An excluded family can still disclose a real battery or operate on
+a real electricity network.
+
+Decision tree
+  1. Identify the principal contribution in the strongest available technical source.
+  2. Does it implement storage for electrical delivery or specifically enable such a store?
+     No or unestablished -> IRRELEVANT. State what it actually does or what is missing.
+  3. Does the store serve a qualified network or industrial installation, or does its architecture establish plant use?
+     No or unestablished -> IRRELEVANT. State the end use or missing deployment link.
+  4. Does the main advance change the physical storage medium, mechanism or integrated storage plant?
+     Yes -> CORE. Otherwise, if it technically enables the qualified store -> ENABLING.
+  5. Set one segment and the decisive rule. Verify the excerpt against the identified source.
+
+5. Operational rulebook R01–R12
+
+R01 | Storage absent. Use when the disclosed service can be traced entirely through generation,
+transmission, load or metering, with no material electrical store. Peak following by a turbine
+governor is excluded. Peak following by issuing battery discharge setpoints qualifies under R04.
+
+R02 | Storage present, qualifying setting missing. Exclude a working device or interface
+demonstrated only in a dedicated appliance, a transport platform or an unspecified installation. An
+isolated base-station battery or a converter with unspecified external loads fails. An offshore
+industrial network sharing recovered electricity across multiple load buses can pass.
+
+R03 | Qualified physical mechanism. Include as CORE when the medium, reservoir, active component or
+integrated plant arrangement materially changes electrical storage or recovery. Identify the
+physical connection and the qualifying installation. An expander coupled to a generator can
+qualify. Modeling the expander’s operating schedule is a different contribution.
+
+R04 | Storage-specific technical support. Include as ENABLING when a qualified store is the object
+of dispatch, sizing, control, protection, maintenance or technically necessary integration.
+Physical construction of a power interface may qualify under this rule. A network schedule that
+could make identical decisions for generic generators, or a ranking of financial benefits with no
+technical output, fails.
+
+R05 | Heat, hydrogen and other carriers. Trace the output beyond the heat tank, electrolyser or
+fuel store. Heat sold as heat, hydrogen produced for use as a commodity, or a fuel cell consuming
+externally supplied fuel fails the electricity-storage test. Electrical input converted to fuel,
+retained and later used for electrical generation can pass. Decide separately whether the disclosed
+advance is the cycle or its control. A secondary heat or commodity output does not invalidate a
+demonstrated electrical branch.
+
+R06 | EVs and V2G. Require a storage-specific network service, such as requesting discharge from
+vehicle batteries for an aggregate distribution peak. Managing traction or delaying drivers’
+charging represents vehicle operation or flexible demand alone. A regulation-market price used by a
+transport asset does not demonstrate a technical grid response.
+
+R07 | Household and microgrid. Single-premises self-consumption, backup or occasional export is
+excluded in the absence of another qualifying function. Common storage acting on a multi-user
+network, storage responding to external operator instructions, and storage balancing an industrial
+or isolated power network can pass. Check which load is being balanced and what triggers discharge.
+
+R08 | Charging stations. Trace the stationary store and identify any service beyond supplying
+vehicle chargers. A local buffer for the charging gun fails by itself. Feeder-constrained storage
+sizing, coordinated control of grid import and storage output for an established grid peak, or
+actual discharge to the local grid during shortage can qualify. Station hardware does not
+automatically imply CORE.
+
+R09 | Conventional hydro. Require an identifiable storage-charging process, such as pumping water
+to a head or expelling water from a submerged reservoir, and later generation from the stored
+hydraulic potential. Turbine regulation, conventional reservoir hydropower and changing demand to
+regulate water level fail without that link. Qualified pumped-storage plant hardware is classified
+under R03 and storage-specific operation under R04.
+
+R10 | Battery materials and parts. Determine whether the part actively participates in storage or
+merely monitors or maintains it, then establish Gate U. An installation-specific
+working-electrolyte arrangement can be CORE. Pack balancing or fault detection in a qualifying
+plant is ENABLING. A new module connector, cell string or BMS with no demonstrated sector
+application is excluded.
+
+R11 | Insufficient technical or sector evidence. Use when evidence leaves a decisive link open, for
+example whether a compensated voltage or peak serves an electrical network, or whether a named
+energy store delivers electricity. Specify that link. This rule is not triggered by lack of EP text
+alone.
+
+R12 | Principal contribution elsewhere. Separate the improvement from its equipment list. Generic
+reserve allocation, factory test sequencing, economic scoring or PV interconnection can all mention
+batteries without operating storage for the qualifying service. Conversely, a storage-specific
+optimizer remains ENABLING even when its apparatus description lists a complete plant.
+
+One primary rule records the decisive branch. R03 was primary for qualifying physical inventions.
+R04 was the usual primary for support, with R06, R07 or R08 primary where the transport,
+residential or charging boundary drove the positive decision. For exclusions, a specific end-use
+rule takes precedence when it directly explains the result. R01 indicates a disclosed non-storage
+operation, R12 an identifiable contribution elsewhere, and R11 a missing link in an otherwise
+plausible storage disclosure. Optional secondary codes identify additional tests. They do not
+create additional labels.
+
+6. Borderline doctrines and technology segments
+
+Grid EMS and converters. Name the manipulated quantity and its target. Charge limits used to
+calculate deliverable regulation, or a bidirectional interface designed to connect station
+batteries, qualify. Generic inverter synchronization or a schedule of generic participant reserves
+does not. Peak is an operating condition, not a technology. Determine whether it changes
+generation, customer demand or stored-energy dispatch.
+
+Battery and flow components. A working-electrolyte tank that participates in rebalancing the active
+inventory changes storage capacity. An added acid-cleaning circuit preserves the operation of an
+existing stack. The distinction turns on what the added circuit changes. Ordinary cells, pack
+electronics and converters need positive deployment evidence even when their battery function is
+explicit.
+
+Homes, vehicles, charging and microgrids. Ask who calls for service and where the power goes. A
+home selling surplus at its own discretion, a vehicle charging more slowly and a charging site
+smoothing its internal voltage are each insufficient alone. An operator instruction, a defined
+community peak, an upstream constraint used in storage sizing, or grid injection at times of
+shortage provides an observable distinction. A stationary storage plant may use mobile containers
+to transfer energy between named generating and receiving stations. Mobility is assessed in the
+context of the principal service.
+
+Thermal and hydrogen routes. Identify retention and the pathway back to electricity. Thermal bodies
+driving a generator qualify even where the abstract omits the original source of the heat. Thermal
+demand shifting for space heat fails. An electrolyser may provide frequency response by changing
+demand without storing electricity for subsequent delivery. Where a battery clearly supplies a
+power network but the hydrogen branch is open, assess the battery contribution on its own evidence.
+
+CAES, flywheels and hydro. Distinguish a purpose-built charge/release reservoir from a compressor
+feeding an unspecified use. Air used only to cool a separate gas generator does not establish
+electrical recovery of the stored air. Flywheel arrays providing network frequency response
+qualify, whereas a rotor buffer serving only turbine pitch/yaw drives fails the network test.
+Hydroelectric generation needs a demonstrated charge stage. For a hybrid plant choose the principal
+storage arrangement, retaining coexisting media in the narrative.
+
+Segment is assigned after the label. BESS covers identified battery systems. FLOW_BATTERY requires
+evidence of flow-battery technology. PUMPED_HYDRO includes equivalent engineered hydraulic
+charge/recovery. COMPRESSED_AIR_LIQUID_AIR groups pressurized or liquefied air storage.
+GRAVITY_FLYWHEEL_MECHANICAL covers relevant mass or rotor storage. THERMAL_TO_ELECTRICITY and
+POWER_TO_X_TO_POWER require their respective return pathways. CROSS_CUTTING_STORAGE is used for
+operation spanning stores, or storage-specific methods where the medium is generic. OTHER_IN_SCOPE
+covers qualified architectures outside a single listed type, including some hybrid or incompletely
+specified physical designs. Exclusions use OUT_OF_SCOPE regardless of the technologies they
+mention.
+
+7. Source ranking, publication versions and language
+
+First establish the principal contribution in the independent claims of a verified publication when
+supplied. Consider dependent claims for a concrete storage embodiment. Read the description of that
+same publication to interpret equipment, energy paths and beneficiaries. Distinguish a specifically
+developed storage embodiment from an optional battery in a list. Use the original title and
+abstract where relevant, and as the principal technical evidence in the absence of matched full
+text. CPC/IPC, applicants and bibliographic links may corroborate context but cannot establish a
+missing gate. An abstract quote is evidence of disclosure and is not presented as claim language.
+
+For a multi-publication family, compare the actual A and B texts. A particular member can establish
+a qualifying embodiment. Record the full exact publication number and its kind for the passage
+used. Do not combine an independent claim from one member with a description from another and
+attribute the combination to a single patent. The policy concerns evidence anywhere in the supplied
+family and does not determine present enforceable rights by jurisdiction. Seven families use a
+quoted publication other than the CSV-selected member.
+
+For family 59685989 the granted EP3422521B1 expressly ties switchable converters to batteries and a
+power system. For 43450072 the EP2449259B1 generator/expansion provisions support the physical
+storage decision. For 34931966 the application EP3266997A1 specifically includes later
+generating-plant use of the produced fuel. The other formulations in this family were not read as
+having identical claims. Where a broader independent claim is generic, the description or a
+narrower claim can establish a specific embodiment without changing the wording of the broad claim.
+
+Use the individual language fields. Among the 55 publications cited, 48 have English claims and
+English descriptions, four have English claims and German descriptions, and three have both in
+German. CSV excerpts reproduce their source verbatim, including German where used. The English
+rationales explain their significance. They are analyst summaries, not quoted English translations.
+The excerpt identifies one decisive passage. For a negative decision, the omitted link is
+established by considering the available record, not by treating silence in that short quotation as
+proof.
+
+8. Exclusion when sector evidence is insufficient
+
+An excluded family can have a real storage mechanism with an unidentified deployment, or a proven
+network service that does not require storage. Record those dimensions separately.
+EXPLICIT_PHYSICAL and EXPLICIT_STORAGE_SUPPORT may therefore occur on excluded rows.
+NO_ELECTRIC_STORAGE refers to the disclosed function. NOT_ESTABLISHED indicates a missing or merely
+incidental relationship. For a mixed-use case, identify any documented qualifying branch before
+excluding it.
+
+State the narrow evidentiary limit, such as an unidentified beneficiary of peak shifting, absent
+electrical recovery from heat, or lack of a storage-specific control quantity. Apply the same
+standard across jurisdictions, document availability and original reviewer partitions. Missing
+European publication text describes retrieval coverage. It is neither evidence against a family nor
+a reason to include it. A sufficiently informative original abstract can support CORE or ENABLING.
+A supplied grant can still support IRRELEVANT. A scope exclusion makes no prediction about
+physically possible adaptations or material that a future search might retrieve.
+
+9. Reproducibility, provenance and limitations
+
+The supplied Team12_ASTRA_V4_RECLASSIFICATION_KIT.zip contains ASTRA_PROMPT_RECLASSIFICATION_V4.md,
+Team12_300_ENRICHED_FOR_ASTRA.csv, Team12_FAMILY_EVIDENCE_FULL.jsonl and manifest.json. The
+manifest reports FULL extraction in PATSTAT PROD and EPAB PROD at 2026-11-19T20:43:34.918490Z.
+Family CPC was extracted from TLS225_DOCDB_FAM_CPC. No separate database edition number was
+supplied in the manifest. No external patent lookup was used. The input files were checked against
+the kit’s supplied SHA-256 values. Annotation was performed on 19 November 2026 by Codex (GPT-6).
+
+Pass one applied the V4 two-gate boundary to each family in its original order, with independent
+judgments recorded in four batches of 75. Existing labels and reviewer flags were not used to set
+outcomes. All 300 JSONL records were decoded. For the 55 families with full text, the selected
+claims and description were matched to the same publication in JSONL. The latter also supplied 33
+further full-text records, giving 88 publication records with claims and descriptions. For each,
+the supplied claims were segmented to locate independent provisions and relevant dependent
+provisions. Description text was scanned in overlapping windows for the problem, solution,
+storage/recovery path and sector use. Targeted passages were assessed with their publication
+identity intact.
+
+The longest selected description was 813,789 characters. It was processed in sections. EPAB text
+sometimes flattens claim numbering and punctuation. Claim-boundary identification in those cases is
+interpretive. The procedure covered the full input files but did not entail a line-by-line human
+reading of every description or a legal analysis of all claims. The evidence_limitation field
+identifies targeted description use, missing source material and material gaps for individual
+decisions.
+
+Pass two compared families grouped by principal contribution, rule and final outcome. Comparisons
+included technical sizing versus economic scoring, peak dispatch versus physical storage
+construction, shared versus individual domestic storage, grid delivery versus charger demand,
+demand-side hydrogen versus fuel-to-power cycles, storage chemistry versus maintenance, and
+conventional versus charged hydro. Decisions were revised where a stated frequency, local voltage,
+market or title did not substantiate the inferred service. No quotas or count targets were applied.
+
+10. Aggregate QA and output validation
+
+Final labels (families)
+  CORE                               30
+  ENABLING                          137
+  IRRELEVANT                        133
+
+Technology segments (families)
+  BESS                               44
+  FLOW_BATTERY                        5
+  PUMPED_HYDRO                        5
+  COMPRESSED_AIR_LIQUID_AIR          15
+  GRAVITY_FLYWHEEL_MECHANICAL         4
+  THERMAL_TO_ELECTRICITY              1
+  POWER_TO_X_TO_POWER                 5
+  CROSS_CUTTING_STORAGE              75
+  OTHER_IN_SCOPE                     13
+  OUT_OF_SCOPE                      133
+
+Primary decision rules (families)
+  R01                                28
+  R02                                21
+  R03                                30
+  R04                               127
+  R05                                11
+  R06                                11
+  R07                                12
+  R08                                 8
+  R09                                 3
+  R10                                 2
+  R11                                25
+  R12                                22
+
+Evidence source types (families)
+  EP_CLAIMS_DESCRIPTION              55
+  EP_CLAIMS                           0
+  EP_DESCRIPTION                      0
+  TITLE_ABSTRACT_CPC                242
+  TITLE_ABSTRACT                      3
+  TITLE_ONLY                          0
+  OTHER_VERIFIED_INPUT                0
+
+Each block totals 300. The quoted source is an original abstract in 245 cases, claims in 47 and a
+description in eight. The evidence-source type describes the bundle available for the decision,
+while the excerpt-source field pinpoints the one quoted passage. Of the 167 positive assignments,
+140 have explicit network or industrial relevance and 27 establish relevance through plant
+architecture.
+
+Coverage and identity checks. The enriched CSV, full JSONL, manifest and output agree on the
+ordered 300 original identifiers. There are 300 distinct IDs, 300 assigned labels, zero empty
+labels and zero duplicate IDs. All 300 titles and abstracts match the original after CSV decoding,
+including the sole empty original abstract for 74672082. PATSTAT returned 299 families and 297 have
+nonempty CPC. Fifty-five have verified claims and descriptions, 241 have no linked EP publication,
+three have linked references without verified text, and one was absent from the PATSTAT result. The
+manifest’s 58 exact EPAB family matches include matches without verified full text.
+
+Every row has one permitted primary rule, the required 17-column structure and the specified
+annotation status. Every positive row has a positive storage and utility/plant relationship. Every
+exclusion has OUT_OF_SCOPE and a failed or unestablished relationship. All 300 excerpts were
+located verbatim in the named input field. All 55 EP citations were matched to a verified
+publication within the same family, including number and kind. Both UTF-8 outputs were read back
+after writing. The CSV and rulebook passed the structural, provenance and count checks. These
+checks test internal consistency and traceability.
+
+11. Concrete boundary examples from the 300-family dataset
+
+Forecasting a peak
+  65069614 | ENABLING | R04 | original abstract
+    The method applies a load forecast and battery limits to dispatch a storage station. The physical battery is an input to the schedule.
+  23416362 | IRRELEVANT | R01 | EP1071185A2
+    Peak shaving and load following are produced by modulating turbine generation. The claims require no charge or discharge from a store.
+
+Technical sizing and financial assessment
+  84511010 | ENABLING | R04 | original abstract
+    The model outputs a storage configuration for a generating station using technical charge/discharge and capacity-fade terms. A financial objective does not remove that technical role.
+  70092955 | IRRELEVANT | R12 | original abstract
+    The scoring system aggregates generator, grid, social and storage revenues. It does not specify a storage operating constraint, technical sizing output or dispatch command.
+
+Hydraulic storage and generation
+  76637790 | CORE | R03 | EP4348035A1
+    The compressor charges the hydraulic head and incoming water drives a turbine-generator. The offshore platform and shore-grid connection distinguish it from ordinary hydro generation.
+  79741404 | IRRELEVANT | R09 | original abstract
+    The turbine modulates generation to support wind and PV. The text does not describe pumping or an equivalent charging cycle.
+
+Hydrogen and later electrical output
+  74930789 | CORE | R03 | original abstract
+    Electrolysis and compression feed stored gases to a fuel cell, and recovered heat also drives a CO2 cycle. This is an integrated physical storage plant.
+  83614750 | IRRELEVANT | R05 | EP4564633A1
+    The independent control variable is electricity consumed to produce hydrogen. Neither the current command nor the frequency service requires later re-electrification.
+
+Heat retention and discharge
+  57851138 | CORE | R03 | original abstract
+    Heat is retained before it drives a machine coupled to an electric generator. The tank, compressor and generating train establish a stationary storage plant.
+  62743323 | IRRELEVANT | R05 | original abstract
+    The grid schedules consumption, but stored heat is delivered as heat. No generator recovers it.
+
+Domestic export and operator coordination
+  43992943 | IRRELEVANT | R07 | original abstract
+    The home can export power, but the record establishes no network instruction, aggregated dispatch or defined network service. Household export alone fails Gate U.
+  48226834 | ENABLING | R04 | EP2976823A2
+    The description allows the store to respond to instructions from electricity suppliers or network operators. This establishes a coordinated storage embodiment beyond ordinary household export.
+
+Shared demand and private consumption
+  44196193 | ENABLING | R07 | original abstract
+    One meter measures the whole zone, and a common store supplies separate dwelling units above a threshold. This is a multi-user network service.
+  47557945 | IRRELEVANT | R07 | EP3151331A1
+    The system charges a battery and supplies local loads. Related documents allow reverse flow, but the operating objective remains household supply and sale of surplus, without a defined network storage service.
+
+Charging stations and grid load
+  82399541 | ENABLING | R08 | EP4303066A1
+    The German claims specify charging at low network load and feeding power into the network at high load. The network-controlled exchange supplies a second, distinct service beyond vehicle charging.
+  69904875 | IRRELEVANT | R08 | original abstract
+    The station can regenerate electricity but delivers it to vehicle chargers. The disclosed service does not extend to a power network.
+
+Storage hardware and dispatch
+  83065520 | CORE | R03 | original abstract
+    The three-phase arrangement physically integrates two complementary storage elements with grid reactors. Its specific hybrid storage assembly supports CORE.
+  60427476 | ENABLING | R04 | original abstract
+    Wind/load forecasting and the battery capacity limit determine additional power at discharge. This is network storage scheduling.
+
+Active electrolyte and maintenance
+  56219709 | CORE | R03 | original abstract
+    A second electrochemical cell and reservoir connection act on the working electrolyte inventory of a stationary-style tank-and-stack system. They materially restore its energy-storage capacity.
+  62707545 | ENABLING | R04 | EP3565046A1
+    The claims distinguish normal charge/discharge from acid cleaning and maintenance of the working electrolyte. The added circuit and operating sequence preserve an existing stationary tank-and-stack store.
+
+Components and deployment
+  89379403 | IRRELEVANT | R10 | original abstract
+    The physical arrangement supports charging and discharging. Neither the abstract nor the available metadata establishes a stationary plant or network function.
+  43450072 | CORE | R03 | EP2449259B1
+    The granted apparatus admits stored gas into a cylinder and sprays liquid to control expansion temperature. The matched description relates the storage cycle to grid delivery.
+
+The origin of stored fuel energy
+  34931966 | CORE | R03 | EP3266997A1
+    A matched family member expressly claims fuel made for later or immediate electricity generation. The later-use branch closes the physical power-to-fuel-to-power cycle at plant scale.
+  35427701 | IRRELEVANT | R05 | EP1794448A1
+    The German description identifies electricity driving an oilseed press. Fuel energy comes from the agricultural feedstock, so the generator and fuel tank do not establish storage of the surplus electricity.
+
+Special-purpose and industrial platforms
+  69322615 | ENABLING | R04 | EP4082089A1
+    The description specifies an offshore industrial installation that shares recovered energy across buses serving multiple loads. The conversion and distribution ring integrates existing stores.
+  70427488 | IRRELEVANT | R02 | original abstract
+    The DC system supplies a mission-specific measurement platform. It does not show industrial network services comparable to a multi-load drilling installation.
+
+Missing original abstract
+  74672082 | IRRELEVANT | EP3883082B1
+    The claim assigns reserve quantities according to network state. It does not require a storage participant or a control law specific to a store.
+
+12. Appropriate interpretation
+
+These are 300 final AI-assisted policy classifications of the supplied family evidence. They answer
+the defined electricity-storage landscape question. The annotation status for every family is
+AI_POLICY_CLASSIFICATION_NOT_HUMAN_VALIDATED. In this dataset, counting CORE alone answers a
+narrower question about physical storage inventions. Counting CORE plus ENABLING also includes
+technical support of qualified systems. Keep that distinction when reporting totals.
+
+The results do not establish legal novelty or granted scope for every family, describe every
+embodiment in every jurisdiction, or provide human-validated ground truth. The uneven availability
+of EP evidence affects what can be demonstrated for particular families. Precision and recall
+require an independent reference standard and an explicitly defined evaluation population. Neither
+metric is estimated by this exercise.

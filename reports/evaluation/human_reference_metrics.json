@@ -1,0 +1,329 @@
+{
+  "benchmark_provenance": "Initially AI-assisted; human review confirmed by Team 12. Review independence and procedure are unverified.",
+  "coverage": {
+    "evaluated": 300,
+    "reference": 300
+  },
+  "master_label_counts": {
+    "CORE": 558,
+    "ENABLING": 2233,
+    "IRRELEVANT": 2526
+  },
+  "three_class": {
+    "n": 300,
+    "accuracy": 0.8566666666666667,
+    "macro_f1": 0.8422602563056764,
+    "weighted_f1": 0.8545000774412277,
+    "cohen_kappa": 0.7565118912797283,
+    "per_class": {
+      "CORE": {
+        "precision": 0.78125,
+        "recall": 0.8333333333333334,
+        "f1": 0.8064516129032258,
+        "support": 30,
+        "predicted": 32
+      },
+      "ENABLING": {
+        "precision": 0.9711538461538461,
+        "recall": 0.7372262773722628,
+        "f1": 0.8381742738589212,
+        "support": 137,
+        "predicted": 104
+      },
+      "IRRELEVANT": {
+        "precision": 0.7987804878048781,
+        "recall": 0.9849624060150376,
+        "f1": 0.8821548821548821,
+        "support": 133,
+        "predicted": 164
+      }
+    },
+    "matrix_reference_rows_prediction_columns": {
+      "CORE": {
+        "CORE": 25,
+        "ENABLING": 1,
+        "IRRELEVANT": 4
+      },
+      "ENABLING": {
+        "CORE": 7,
+        "ENABLING": 101,
+        "IRRELEVANT": 29
+      },
+      "IRRELEVANT": {
+        "CORE": 0,
+        "ENABLING": 2,
+        "IRRELEVANT": 131
+      }
+    }
+  },
+  "binary_relevance": {
+    "n": 300,
+    "accuracy": 0.8833333333333333,
+    "macro_f1": 0.8833216654998833,
+    "weighted_f1": 0.88345390094565,
+    "cohen_kappa": 0.769108980561175,
+    "per_class": {
+      "RELEVANT": {
+        "precision": 0.9852941176470589,
+        "recall": 0.8023952095808383,
+        "f1": 0.8844884488448845,
+        "support": 167,
+        "predicted": 136
+      },
+      "IRRELEVANT": {
+        "precision": 0.7987804878048781,
+        "recall": 0.9849624060150376,
+        "f1": 0.8821548821548821,
+        "support": 133,
+        "predicted": 164
+      }
+    },
+    "matrix_reference_rows_prediction_columns": {
+      "RELEVANT": {
+        "RELEVANT": 134,
+        "IRRELEVANT": 33
+      },
+      "IRRELEVANT": {
+        "RELEVANT": 2,
+        "IRRELEVANT": 131
+      }
+    }
+  },
+  "per_cohort": {
+    "CLAUDE_CODE_WEB": {
+      "n": 88,
+      "accuracy": 0.8636363636363636,
+      "macro_f1": 0.8844797178130511,
+      "weighted_f1": 0.8616822991822992,
+      "cohen_kappa": 0.7813211845102507,
+      "per_class": {
+        "CORE": {
+          "precision": 0.9285714285714286,
+          "recall": 1.0,
+          "f1": 0.9629629629629629,
+          "support": 13,
+          "predicted": 14
+        },
+        "ENABLING": {
+          "precision": 0.967741935483871,
+          "recall": 0.7317073170731707,
+          "f1": 0.8333333333333334,
+          "support": 41,
+          "predicted": 31
+        },
+        "IRRELEVANT": {
+          "precision": 0.7674418604651163,
+          "recall": 0.9705882352941176,
+          "f1": 0.8571428571428571,
+          "support": 34,
+          "predicted": 43
+        }
+      },
+      "matrix_reference_rows_prediction_columns": {
+        "CORE": {
+          "CORE": 13,
+          "ENABLING": 0,
+          "IRRELEVANT": 0
+        },
+        "ENABLING": {
+          "CORE": 1,
+          "ENABLING": 30,
+          "IRRELEVANT": 10
+        },
+        "IRRELEVANT": {
+          "CORE": 0,
+          "ENABLING": 1,
+          "IRRELEVANT": 33
+        }
+      }
+    },
+    "CODEX_COMPLETION": {
+      "n": 38,
+      "accuracy": 0.9210526315789473,
+      "macro_f1": 0.9397071490094745,
+      "weighted_f1": 0.919420644634843,
+      "cohen_kappa": 0.8566037735849056,
+      "per_class": {
+        "CORE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3,
+          "predicted": 3
+        },
+        "ENABLING": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888,
+          "support": 15,
+          "predicted": 12
+        },
+        "IRRELEVANT": {
+          "precision": 0.8695652173913043,
+          "recall": 1.0,
+          "f1": 0.9302325581395349,
+          "support": 20,
+          "predicted": 23
+        }
+      },
+      "matrix_reference_rows_prediction_columns": {
+        "CORE": {
+          "CORE": 3,
+          "ENABLING": 0,
+          "IRRELEVANT": 0
+        },
+        "ENABLING": {
+          "CORE": 0,
+          "ENABLING": 12,
+          "IRRELEVANT": 3
+        },
+        "IRRELEVANT": {
+          "CORE": 0,
+          "ENABLING": 0,
+          "IRRELEVANT": 20
+        }
+      }
+    },
+    "CODEX_LOCAL": {
+      "n": 55,
+      "accuracy": 0.8727272727272727,
+      "macro_f1": 0.8324514991181657,
+      "weighted_f1": 0.8702260702260702,
+      "cohen_kappa": 0.7877618522601985,
+      "per_class": {
+        "CORE": {
+          "precision": 0.7142857142857143,
+          "recall": 0.7142857142857143,
+          "f1": 0.7142857142857143,
+          "support": 7,
+          "predicted": 7
+        },
+        "ENABLING": {
+          "precision": 0.9473684210526315,
+          "recall": 0.782608695652174,
+          "f1": 0.8571428571428571,
+          "support": 23,
+          "predicted": 19
+        },
+        "IRRELEVANT": {
+          "precision": 0.8620689655172413,
+          "recall": 1.0,
+          "f1": 0.9259259259259259,
+          "support": 25,
+          "predicted": 29
+        }
+      },
+      "matrix_reference_rows_prediction_columns": {
+        "CORE": {
+          "CORE": 5,
+          "ENABLING": 1,
+          "IRRELEVANT": 1
+        },
+        "ENABLING": {
+          "CORE": 2,
+          "ENABLING": 18,
+          "IRRELEVANT": 3
+        },
+        "IRRELEVANT": {
+          "CORE": 0,
+          "ENABLING": 0,
+          "IRRELEVANT": 25
+        }
+      }
+    },
+    "CODEX_WEB_SUBAGENTS": {
+      "n": 81,
+      "accuracy": 0.9506172839506173,
+      "macro_f1": 0.8906926406926408,
+      "weighted_f1": 0.9506172839506173,
+      "cohen_kappa": 0.9096234309623431,
+      "per_class": {
+        "CORE": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "support": 4,
+          "predicted": 4
+        },
+        "ENABLING": {
+          "precision": 1.0,
+          "recall": 0.925,
+          "f1": 0.961038961038961,
+          "support": 40,
+          "predicted": 37
+        },
+        "IRRELEVANT": {
+          "precision": 0.925,
+          "recall": 1.0,
+          "f1": 0.961038961038961,
+          "support": 37,
+          "predicted": 40
+        }
+      },
+      "matrix_reference_rows_prediction_columns": {
+        "CORE": {
+          "CORE": 3,
+          "ENABLING": 0,
+          "IRRELEVANT": 1
+        },
+        "ENABLING": {
+          "CORE": 1,
+          "ENABLING": 37,
+          "IRRELEVANT": 2
+        },
+        "IRRELEVANT": {
+          "CORE": 0,
+          "ENABLING": 0,
+          "IRRELEVANT": 37
+        }
+      }
+    },
+    "QWEN_GPU": {
+      "n": 38,
+      "accuracy": 0.5526315789473685,
+      "macro_f1": 0.443064182194617,
+      "weighted_f1": 0.49852893102321016,
+      "cohen_kappa": 0.23910482921083637,
+      "per_class": {
+        "CORE": {
+          "precision": 0.25,
+          "recall": 0.3333333333333333,
+          "f1": 0.2857142857142857,
+          "support": 3,
+          "predicted": 4
+        },
+        "ENABLING": {
+          "precision": 0.8,
+          "recall": 0.2222222222222222,
+          "f1": 0.34782608695652173,
+          "support": 18,
+          "predicted": 5
+        },
+        "IRRELEVANT": {
+          "precision": 0.5517241379310345,
+          "recall": 0.9411764705882353,
+          "f1": 0.6956521739130435,
+          "support": 17,
+          "predicted": 29
+        }
+      },
+      "matrix_reference_rows_prediction_columns": {
+        "CORE": {
+          "CORE": 1,
+          "ENABLING": 0,
+          "IRRELEVANT": 2
+        },
+        "ENABLING": {
+          "CORE": 3,
+          "ENABLING": 4,
+          "IRRELEVANT": 11
+        },
+        "IRRELEVANT": {
+          "CORE": 0,
+          "ENABLING": 1,
+          "IRRELEVANT": 16
+        }
+      }
+    }
+  }
+}

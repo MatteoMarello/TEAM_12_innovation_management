@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.env
+*.zip
+data/final/*
+data/reference/*
+data/interim/*
+data/raw/*
+!data/*/README.md
+!data/*/SHA256SUMS.txt
