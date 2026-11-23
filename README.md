@@ -45,7 +45,7 @@ exclusions (IRRELEVANT). [Methodology](docs/METHODOLOGY.md) · [Full V4 policy](
 binary relevance metrics, the confusion matrix and source-cohort results. The 300 labels
 were initially AI-assisted and subsequently human-reviewed, as confirmed by Team 12.
 The benchmarking limits and absence of independent-review evidence are documented in
-[Evaluation](docs/EVALUATION.md).
+[Evaluation](docs/EVALUATION.md). The [final methodology and technical review](reports/REPORT_FINAL.md) summarizes all 300 reannotations and the adjudication queue.
 
 ## Reproduce and extend
 
