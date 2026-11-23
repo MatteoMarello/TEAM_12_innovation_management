@@ -3,7 +3,7 @@
 The observation is an original DOCDB family. `docdb_family_id` is a stable string join key.
 `representative_appln_id`, `title_appln_id` and `abstract_appln_id` identify application records.
 The representative and evidence applications can differ. A publication identifier, where present
-in provenance, identifies a publication rather than a family or an application. 
+in provenance, identifies a publication rather than a family or an application.
 
 | Field group | Meaning |
 |---|---|
