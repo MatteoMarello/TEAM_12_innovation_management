@@ -19,7 +19,7 @@ workspace permitted access to the other sources. The targeted priority disagreem
 was intentionally unblinded. Differences may reflect both true scope interpretation and
 differences in supplied evidence. Proposed changes remain separate from canonical labels.
 
-The sample partners a convenience benchmark with a prefiltered candidate frame.
+The benchmark comes from a prefiltered candidate frame. Its selection probabilities are unavailable.
 Consequently the benchmark agreement numbers cannot establish exhaustive retrieval.
 An independent sampling frame of retrieved and excluded records with expert evaluation
 is required for retrieval recall.

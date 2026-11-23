@@ -29,6 +29,10 @@ sector = load("sector")
 
 ## Method and results
 
+The validated master contains 558 CORE, 2,233 ENABLING and 2,526 IRRELEVANT families.
+The sector subset contains 2,791 families. Across the 300 reviewed cases, three-class
+accuracy is 85.67%, macro F1 is 0.8423 and weighted F1 is 0.8545.
+
 The source collection comes from PATSTAT/TIP CPC and keyword candidate searches.
 The handoff describes BM25, Patent SBERT and fusion as retrieval stages without the
 configuration and ranked data required to reproduce their execution. We preserve the

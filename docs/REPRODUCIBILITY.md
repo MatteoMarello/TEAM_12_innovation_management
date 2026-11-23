@@ -23,6 +23,8 @@ python -m src.classification.export_canonical --integration /path/to/TEAM12_MAST
 The exporter first runs strict consolidation and normalizes the original reference. It
 checks the ordered family universe and metadata against the original candidate CSV. It
 then writes the same ordered master and sector subset and reports their SHA-256 values.
+Check every source label and recorded model lineage with
+`python -m src.validation.lineage --integration /path/to/TEAM12_MASTER_INTEGRATION_FOR_CODEX`.
 The review and comparison scripts in the private integration folder regenerate audit
 tables from committed decisions. They run no model inference. Reproducing stored outputs
 and regenerating model judgments are distinct operations.
